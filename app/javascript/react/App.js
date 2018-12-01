@@ -1,12 +1,15 @@
 import React from 'react';
-import SplashContainer from './containers/SplashContainer'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import SplashContainer from './containers/SplashContainer';
 
 class App extends React.Component {
+
   render(){
     return(
-      <div>
-        <SplashContainer />
-      </div>
+      <Router>
+        <Route path='/' component={SplashContainer}/>
+      </Router>
     )
   }
 }
