@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>WhateverForever</title>
+    <link rel="icon" type="image/png" href="/assets/lazerkrusty-tiny" >
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +11,7 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
+  <body id="body-container" style='background-color: #000000' >
     <%= yield %>
   </body>
 </html>

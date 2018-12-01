@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+
+.side-button {
+  background-color: rgba(255,255,255,0);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'BenchNine', Arial, sans-serif;
+  font-size: 1em;
+  font-size: 50px;
+  line-height: 1em;
+  margin-top: 20px;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 225px;
+   a {
+     color: #ffffff;
+   }
+}
+
+@media(max-width: 640px){
+  #side-button-one {
+    margin-top: 350px;
+  }
+
+}
+.side-button:before,
+.side-button:after {
+  border-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-style: solid;
+  border-width: 0;
+  content: "";
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+
+.side-button:before {
+  border-color: #FF8400;
+  border-top-width: 2px;
+  left: 0px;
+  top: -5px;
+}
+
+.side-button:after {
+  border-bottom-width: 2px;
+  border-color: #FF8400;
+  bottom: -5px;
+  right: 0px;
+}
+
+.side-button:hover,
+.side-button.hover {
+  background-color: rgba(255,255,255,0);
+}
+
+.side-button:hover:before,
+.side-button.hover:before,
+.side-button:hover:after,
+.side-button.hover:after {
+  height: 100%;
+  width: 100%;
+}

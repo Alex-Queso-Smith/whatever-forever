@@ -1,0 +1,56 @@
+// html {
+//   width: 100%;
+//   height: 100%;
+// }
+//
+// body {
+//   width: 100%;
+//   height: 100%;
+// }
+
+#body-container {
+  background: url('/assets/whatever-forever-arch') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 75%;
+}
+
+@media(max-width: 1400px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-1400') no-repeat center fixed;
+    background-size: 75%;
+  }
+}
+@media(max-width: 1243px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-1243') no-repeat center fixed;
+    background-size: 75%;
+  }
+}
+@media(max-width: 1143px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-1143') no-repeat center fixed;
+    background-size: 75%;
+  }
+}
+@media(max-width: 1017px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-1017') no-repeat center fixed;
+  }
+}
+@media(max-width: 893px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-893') no-repeat center fixed;
+  }
+}
+@media(max-width: 771px){
+  #body-container {
+    background: url('/assets/whatever-forever-arch-771') no-repeat center fixed;
+  }
+}
+@media(max-width: 640px){
+  #body-container {
+    background: url('/assets/patagonia-cropped-tall') no-repeat 48% 0% fixed;
+  }
+}
