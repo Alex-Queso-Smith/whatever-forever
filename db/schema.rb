@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_01_040452) do
+ActiveRecord::Schema.define(version: 2018_09_29_182206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "drops", force: :cascade do |t|
-    t.date "drop_date", null: false
-    t.string "image", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
