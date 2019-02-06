@@ -102,9 +102,11 @@ class SplashContainer extends React.Component {
               </a>
             </div>
             <div className="cell medium-4 text-center">
-              <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
-                Gallery
-              </button>
+              <a href="https://gz1.bigcartel.com/" >
+                <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
+                  Gallery
+                </button>
+              </a>
             </div>
             <div className="cell medium-4 text-center">
               <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
