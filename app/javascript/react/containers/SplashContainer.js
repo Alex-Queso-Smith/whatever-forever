@@ -2,73 +2,91 @@ import React from 'react';
 import moment from 'moment';
 
 import Modal from '../components/Modal';
+import TimerContainer from './TimerContainer';
+// import { DropTime } from '../components/DropTime';
 
 class SplashContainer extends React.Component {
   state = {
     showModal: false,
-    drops: []
+    drops: [],
+    latestDrop: {}
   }
 
   showDropModal = this.showDropModal.bind(this);
   closeDropModal = this.closeDropModal.bind(this);
+  handleOutsideClick = this.handleOutsideClick.bind(this);
 
-  // componentDidMount(){
-  //   fetch('/api/v1/drops.json', {
-  //     credentials: 'same-origin'
-  //   })
-  //   .then(response => {
-  //     if (response.ok) {
-  //       return response
-  //     } else {
-  //       let errorMessage = `${response.status} (${response.statusText})`,
-  //         error = new Error(errorMessage)
-  //       throw(error)
-  //     }
-  //   })
-  //   .then(response => response.json())
-  //   .then(dropData => {
-  //
-  //     this.setState({
-  //       drops: dropData.drops
-  //     })
-  //   })
-  //   .catch(error => console.error(`Error in fetch: ${error.message}`))
-  // }
+  componentDidMount(){
+    fetch('/api/v1/drops.json', {
+      credentials: 'same-origin'
+    })
+    .then(response => {
+      if (response.ok) {
+        return response
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage)
+        throw(error)
+      }
+    })
+    .then(response => response.json())
+    .then(dropData => {
+
+      var { drops, latest_drop } = dropData
+
+      this.setState({
+        drops: drops,
+        latestDrop: latest_drop
+      })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
+  }
 
   showDropModal(){
     this.setState({ showModal: !this.state.showModal })
+    document.addEventListener('click', this.handleOutsideClick, false)
     document.body.classList.add("whatever-modal-locked");
   }
 
   closeDropModal(){
     this.setState({ showModal: !this.state.showModal })
+    document.removeEventListener('click', this.handleOutsideClick, false)
     document.body.classList.remove("whatever-modal-locked");
+  }
+
+  handleOutsideClick(event) {
+    if (!event.target.classList.value.includes("whatever-modal")) {
+      return;
+    } else {
+      this.closeDropModal();
+    }
   }
 
   render(){
     var dropModal;
-    var now = moment().format()
-    var { drops } = this.state;
-
-
-
-    if (drops[0]) {
-      var dropTime, seconds, days, weeks, future, difference, tester, dropMonth;
-      dropTime = moment(this.state.drops[0].drop_date.replace('T', ' ').replace('.000Z', '') ).format('YYYY-MM-DD HH:mm:ss')
-      future = moment(now).to(dropTime)
-      tester = moment(now).calendar(dropTime)
-
-      dropMonth = moment(dropTime).get('month')
-      weekday = momenth(dropTime).weekday()
-    }
+    var { drops, latestDrop } = this.state;
 
     if (this.state.showModal) {
-      dropModal =
-      <Modal
-        handleClose={this.closeDropModal}
-      >
-        <img src="/assets/6godbart-con" />
-      </Modal>
+      if (this.state.latestDrop.pending) {
+        var title = "Drop coming soon!"
+        dropModal =
+        <Modal
+          handleClose={this.closeDropModal}
+          title={title}
+          >
+        </Modal>
+      } else {
+        var { title, price, drop_date } = this.state.latestDrop
+        dropModal =
+        <Modal
+          handleClose={this.closeDropModal}
+          title={title}
+          price={price.toFixed(2)}
+          dropTime={drop_date}
+          >
+          <img className="modal-image" src={this.state.drops[0].image.asset.url} />
+        </Modal>
+      }
     }
 
     return(
@@ -84,12 +102,12 @@ class SplashContainer extends React.Component {
               </a>
             </div>
             <div className="cell medium-4 text-center">
-              <button className="side-button text-center" >
+              <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
                 Gallery
               </button>
             </div>
             <div className="cell medium-4 text-center">
-              <button onClick={this.showDropModal} className="side-button text-center" >
+              <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
                 Upcoming
               </button>
             </div>

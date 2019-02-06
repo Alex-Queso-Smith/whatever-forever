@@ -25,6 +25,8 @@ module Fae
 
     def structure
       [
+        item('Drops', path: admin_drops_path),
+        item('Drops Categories', path: admin_drops_categories_path),
         # scaffold inject marker
       ]
     end

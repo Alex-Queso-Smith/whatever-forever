@@ -24,9 +24,14 @@
 
 @media(max-width: 640px){
   #side-button-one {
-    margin-top: 350px;
+    margin-top: 225px;
   }
-
+  #side-button-two {
+    margin-top: 40px;
+  }
+  #side-button-three {
+    margin-top: 40px;
+  }
 }
 .side-button:before,
 .side-button:after {
