@@ -1,4 +1,9 @@
 class Drop < ApplicationRecord
-  validates :drop_date, presence: true
-  validates :image, presence: true
+  include Fae::BaseModelConcern
+  has_fae_image :drop_image
+
+  def fae_display_field
+    title
+  end
+
 end

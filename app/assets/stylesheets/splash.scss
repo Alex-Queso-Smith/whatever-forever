@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Bitter-Italic';
+  src: url('/assets/Bitter-Italic.otf');
+}
+
 #splash-grid {
   max-width: 100%;
 }
@@ -7,7 +12,9 @@
   text-align: center;
   width: 100%;
   margin: auto;
+  margin-bottom: 10px;
   position: fixed;
   bottom: 0;
   font-style: italic;
+  font-family: 'Bitter-Italic'
 }

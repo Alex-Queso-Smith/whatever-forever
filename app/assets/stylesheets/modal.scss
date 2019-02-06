@@ -1,30 +1,43 @@
+@font-face {
+   font-family: 'Bitter-Bold';
+   src: url('/assets/Bitter-Bold.otf');
+   font-family: 'Bitter-Bold-Italic';
+   src: url('/assets/Bitter-BoldItalic.otf');
+   font-family: 'Bitter-Italic';
+   src: url('/assets/Bitter-Italic.otf');
+   font-family: 'Biter-Regular';
+   src: url('/assets/Bitter-Regular.otf');
+}
+
 .whatever-modal {
   position: fixed;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 10000;
 }
 
 .whatever-modal-main {
-  position:fixed;
+  position: fixed;
   background: white;
-  width: 50%;
-  height: 80%;
+  max-width: 900px;
+  max-height: 900px;
+  width: auto;
+  height: auto;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
   padding: 15px;
+  border: 2px solid black;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 2%;
+  border-radius: 5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   text-align: center;
 
-  h3 {
-    height: 10%;
-  }
   .whatever-modal-contents {
     height: 82%;
     width: 100%;
@@ -47,4 +60,70 @@
 
 .whatever-modal-locked {
   overflow: hidden;
+}
+
+.modal-price {
+  font-family: 'Bitter-Italic';
+  font-size: 1em;
+  text-align: center;
+}
+
+.modal-image {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  max-height: 450px;
+  max-width: 450px;
+  height: auto;
+  width: auto;
+}
+
+.modal-drop-title {
+  font-size: 1.5em;
+  font-family: "Bitter-Regular";
+}
+
+.modal-drop-date {
+  font-size: 1.75em;
+  font-family: "Bitter-Bold";
+}
+
+@media(max-width: 640px){
+  .whatever-modal-main {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    text-align: center;
+
+    .whatever-modal-contents {
+      height: 82%;
+      width: 100%;
+      text-align: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .whatever-modal-close {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+
+      border: 3px solid #000;
+      border-radius: 50%;
+      height: 26px;
+      width: 26px;
+      background-color: #fff;
+    }
+  }
+
+  .modal-image {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    height: auto;
+    width: auto;
+  }
 }
