@@ -101,20 +101,20 @@ class SplashContainer extends React.Component {
                 <div className="grid-y justify-content-center">
                   <div className="cell large-4 text-center">
                     <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-one" className="side-button side-button-phone text-center" >
+                      <button id="side-button-one-phone" className="side-button side-button-phone text-center" >
                         Shop
                       </button>
                     </a>
                   </div>
                   <div className="cell large-4 text-center">
                     <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-two" className="side-button side-button-phone text-center" onClick={this.backgroundChange} >
+                      <button id="side-button-two-phone" className="side-button side-button-phone text-center" onClick={this.backgroundChange} >
                         Gallery
                       </button>
                     </a>
                   </div>
                   <div className="cell large-4 text-center">
-                    <button id="side-button-three" onClick={this.showDropModal} className="side-button side-button-phone text-center" >
+                    <button id="side-button-three-phone" onClick={this.showDropModal} className="side-button side-button-phone text-center" >
                       Upcoming
                     </button>
                   </div>
