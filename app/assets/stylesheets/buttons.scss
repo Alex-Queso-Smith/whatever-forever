@@ -24,13 +24,17 @@
 
 @media(max-width: 1025px){
   #side-button-one {
-    margin-top: 250px;
+    font-size: 1.5rem;
+  }
+
+  #side-button-one {
+    margin-top: 400px;
   }
   #side-button-two {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   #side-button-three {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 .side-button:before,

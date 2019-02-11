@@ -92,7 +92,7 @@ class SplashContainer extends React.Component {
     return(
       <div id="splash-container" >
         {dropModal}
-        <div id="splash-grid" className="grid-container">
+        <div id="splash-grid" className="grid-container fluid">
           <div className="grid-x">
             <div className="cell medium-12 large-4 text-center">
               <a href="https://gz1.bigcartel.com/" >
