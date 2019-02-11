@@ -108,7 +108,7 @@ class SplashContainer extends React.Component {
                   </div>
                   <div className="cell large-4 text-center">
                     <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-two" className=" side-button side-button-phone text-center" onClick={this.backgroundChange} >
+                      <button id="side-button-two" className="side-button side-button-phone text-center" onClick={this.backgroundChange} >
                         Gallery
                       </button>
                     </a>
