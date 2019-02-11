@@ -22,21 +22,16 @@
    }
 }
 
-@media(max-width: 1025px){
-  #side-button-one {
-    font-size: 1.5rem;
-  }
-
-  #side-button-one {
-    margin-top: 400px;
-  }
-  #side-button-two {
-    margin-top: 50px;
-  }
-  #side-button-three {
-    margin-top: 50px;
-  }
+#side-button-one {
+  margin-top: 400px;
 }
+#side-button-two {
+  margin-top: 40px;
+}
+#side-button-three {
+  margin-top: 40px;
+}
+
 .side-button:before,
 .side-button:after {
   border-color: transparent;
@@ -75,4 +70,12 @@
 .side-button.hover:after {
   height: 100%;
   width: 100%;
+}
+
+#side-button-phone {
+  margin-bottom: 50px;
+}
+
+.justify-content-center {
+  justify-content: center;
 }
