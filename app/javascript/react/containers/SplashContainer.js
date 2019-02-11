@@ -94,21 +94,21 @@ class SplashContainer extends React.Component {
         {dropModal}
         <div id="splash-grid" className="grid-container">
           <div className="grid-x">
-            <div className="cell medium-4 text-center">
+            <div className="cell medium-12 large-4 text-center">
               <a href="https://gz1.bigcartel.com/" >
                 <button id="side-button-one" className="side-button text-center" >
                   Shop
                 </button>
               </a>
             </div>
-            <div className="cell medium-4 text-center">
+            <div className="cell medium-12 large-4 text-center">
               <a href="https://gz1.bigcartel.com/" >
                 <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
                   Gallery
                 </button>
               </a>
             </div>
-            <div className="cell medium-4 text-center">
+            <div className="cell medium-12 large-4 text-center">
               <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
                 Upcoming
               </button>
