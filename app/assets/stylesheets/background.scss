@@ -15,7 +15,11 @@ $phone-breakpoint: 1025px;
 
 @media (max-width: $phone-breakpoint) {
   #body-container > img {
-    width: 80%;
+    width: 100%;
+  }
+  #body-container {
+    position: relative;
+    background: no-repeat url('/cat-background.png') 50% / 150%;
   }
 }
 
