@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
 
+$cat-blue: #3B96BA;
+$black: #202430;
+
 .side-button {
   background-color: rgba(255,255,255,0);
   border: none;
-  color: #ffffff;
+  color: $black;
   cursor: pointer;
   display: inline-block;
   font-family: 'BenchNine', Arial, sans-serif;
@@ -51,7 +54,7 @@
 }
 
 .side-button:before {
-  border-color: #FF8400;
+  border-color: $cat-blue;
   border-top-width: 2px;
   left: 0px;
   top: -5px;
@@ -59,7 +62,7 @@
 
 .side-button:after {
   border-bottom-width: 2px;
-  border-color: #FF8400;
+  border-color: $cat-blue;
   bottom: -5px;
   right: 0px;
 }

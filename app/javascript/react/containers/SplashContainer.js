@@ -90,63 +90,87 @@ class SplashContainer extends React.Component {
       }
     }
 
+    var oldQuery =
+    <Media query="(max-width: 1025px)">
+      {matches =>
+        matches ? (
+          <div id="splash-grid" className="grid-container fluid">
+            <div className="grid-y justify-content-center">
+              <div className="cell large-4 text-center">
+                <a href="https://gz1.bigcartel.com/" >
+                  <button id="side-button-one-phone" className="side-button side-button-phone text-center" >
+                    Shop
+                  </button>
+                </a>
+              </div>
+              <div className="cell large-4 text-center">
+                <a href="https://gz1.bigcartel.com/" >
+                  <button id="side-button-two-phone" className="side-button side-button-phone text-center" onClick={this.backgroundChange} >
+                    Gallery
+                  </button>
+                </a>
+              </div>
+              <div className="cell large-4 text-center">
+                <button id="side-button-three-phone" onClick={this.showDropModal} className="side-button side-button-phone text-center" >
+                  Upcoming
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div id="splash-grid" className="grid-container fluid">
+            <div className="grid-x">
+              <div className="cell medium-12 large-4 text-center">
+                <a href="https://gz1.bigcartel.com/" >
+                  <button id="side-button-one" className="side-button text-center" >
+                    Shop
+                  </button>
+                </a>
+              </div>
+              <div className="cell medium-12 large-4 text-center">
+                <a href="https://gz1.bigcartel.com/" >
+                  <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
+                    Gallery
+                  </button>
+                </a>
+              </div>
+              <div className="cell medium-12 large-4 text-center">
+                <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
+                  Upcoming
+                </button>
+              </div>
+            </div>
+          </div>
+        )
+      }
+    </Media>
     return(
       <div id="splash-container" >
         {dropModal}
 
-        <Media query="(max-width: 1025px)">
-          {matches =>
-            matches ? (
-              <div id="splash-grid" className="grid-container fluid">
-                <div className="grid-y justify-content-center">
-                  <div className="cell large-4 text-center">
-                    <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-one-phone" className="side-button side-button-phone text-center" >
-                        Shop
-                      </button>
-                    </a>
-                  </div>
-                  <div className="cell large-4 text-center">
-                    <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-two-phone" className="side-button side-button-phone text-center" onClick={this.backgroundChange} >
-                        Gallery
-                      </button>
-                    </a>
-                  </div>
-                  <div className="cell large-4 text-center">
-                    <button id="side-button-three-phone" onClick={this.showDropModal} className="side-button side-button-phone text-center" >
-                      Upcoming
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div id="splash-grid" className="grid-container fluid">
-                <div className="grid-x">
-                  <div className="cell medium-12 large-4 text-center">
-                    <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-one" className="side-button text-center" >
-                        Shop
-                      </button>
-                    </a>
-                  </div>
-                  <div className="cell medium-12 large-4 text-center">
-                    <a href="https://gz1.bigcartel.com/" >
-                      <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
-                        Gallery
-                      </button>
-                    </a>
-                  </div>
-                  <div className="cell medium-12 large-4 text-center">
-                    <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
-                      Upcoming
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )
-          }
-        </Media>
+        <div id="splash-grid" className="grid-container fluid">
+          <div className="grid-x justify-content-center">
+            <div className="cell medium-4 large-4 text-center">
+              <a href="https://gz1.bigcartel.com/" >
+                <button id="side-button-one" className="side-button text-center" >
+                  Shop
+                </button>
+              </a>
+            </div>
+            <div className="cell medium-4 large-4 text-center">
+              <a href="https://gz1.bigcartel.com/" >
+                <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
+                  Gallery
+                </button>
+              </a>
+            </div>
+            <div className="cell medium-4 large-4 text-center">
+              <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
+                Upcoming
+              </button>
+            </div>
+          </div>
+        </div>
 
         <p className="copyright">Copyright &copy; 2018 whateverforever</p>
       </div>
