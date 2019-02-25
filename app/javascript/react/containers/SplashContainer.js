@@ -152,21 +152,21 @@ class SplashContainer extends React.Component {
           <div className="grid-x justify-content-center">
             <div className="cell medium-4 large-4 text-center">
               <a href="https://gz1.bigcartel.com/" >
-                <button id="side-button-one" className="side-button text-center" >
+                <button id="side-button-one" className="test-button text-center" >
                   Shop
                 </button>
               </a>
             </div>
             <div className="cell medium-4 large-4 text-center">
               <a href="https://gz1.bigcartel.com/" >
-                <button id="side-button-two" className="side-button text-center" onClick={this.backgroundChange} >
+                <button id="side-button-two" className="test-button text-center" onClick={this.backgroundChange} >
                   Gallery
                 </button>
               </a>
             </div>
             <div className="cell medium-4 large-4 text-center">
-              <button id="side-button-three" onClick={this.showDropModal} className="side-button text-center" >
-                Upcoming
+              <button id="side-button-three" onClick={this.showDropModal} className="test-button text-center" >
+                New
               </button>
             </div>
           </div>

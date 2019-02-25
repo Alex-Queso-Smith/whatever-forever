@@ -4,13 +4,14 @@ $phone-breakpoint: 1025px;
 
 #body-container {
   position: relative;
-  background: no-repeat url('/cat-background.png') 50% / 100%;
+  background: no-repeat url('/bartfield-background.png') 50% / 55%;
 }
 
 #body-container > img {
   vertical-align: bottom;
   width: 50%;
   opacity: 0;
+  margin-top: 75px;
 }
 
 @media (max-width: $phone-breakpoint) {
@@ -18,7 +19,7 @@ $phone-breakpoint: 1025px;
     width: 100%;
   }
   #body-container {
-    background: no-repeat url('/cat-background.png') 33% / 150%;
+    background: no-repeat url('/bartfield-background.png') 33% / 100%;
   }
 }
 
