@@ -56,3 +56,8 @@ gem 'jquery-rails'
 gem 'pry-rails'
 gem 'foundation-rails', '~> 6.4.3'
 gem 'fae-rails'
+gem "aws-sdk-s3", require: false
+gem 'carrierwave'
+gem "fog-aws", group: [:production, :development]
+gem "fog", group: [:production, :development]
+gem "dotenv-rails", group: [:development, :test]
