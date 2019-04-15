@@ -1,24 +1,3 @@
-# README
+# Whatever Forever
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a simple landing page to link to Whatever Forever bigcartel and have custom uploading for owner to notify customers of upcoming drop of the week for products. View the landing page here [whateverforever](www.whateverforever.com)
